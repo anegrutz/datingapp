@@ -12,7 +12,8 @@ backend.
 
 | Screen | Route | Notes |
 |--------|-------|-------|
-| Nearby grid | `/` | Proximity grid with online-now + distance filters |
+| Onboarding | `/welcome` | Sign-up → 18+ age gate → location permission → profile setup |
+| Nearby grid | `/` | Proximity grid with a filter sheet (online, distance, age, looking-for) |
 | Profile | `/profile/[id]` | Photo hero, interests, looking-for, Message/Tap actions |
 | Taps | `/taps` | Lightweight interest signals received |
 | Messages | `/messages` | Conversation list with unread badges |

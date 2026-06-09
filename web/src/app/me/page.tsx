@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Header from "@/components/Header";
 import Chip from "@/components/Chip";
 import SettingToggle from "@/components/SettingToggle";
@@ -34,9 +35,12 @@ export default function MePage() {
         </div>
 
         <div className="px-4">
-          <button className="h-11 w-full rounded-full border border-accent text-sm font-semibold text-accent">
+          <Link
+            href="/welcome"
+            className="flex h-11 w-full items-center justify-center rounded-full border border-accent text-sm font-semibold text-accent"
+          >
             Edit profile
-          </button>
+          </Link>
         </div>
 
         <section className="px-4 py-5">

@@ -1,8 +1,8 @@
 import { notFound } from "next/navigation";
-import Link from "next/link";
 import Header from "@/components/Header";
 import Avatar from "@/components/Avatar";
 import Chip from "@/components/Chip";
+import ProfileActions from "@/components/ProfileActions";
 import {
   profiles,
   getProfile,
@@ -92,28 +92,7 @@ export default async function ProfilePage({
         </div>
       </main>
 
-      {/* Action bar */}
-      <div className="sticky bottom-0 z-20 border-t border-border bg-surface/95 px-4 py-3 backdrop-blur">
-        <div className="mx-auto flex max-w-md items-center gap-3">
-          <button
-            className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-border text-accent"
-            aria-label="Tap"
-            title="Send a Tap"
-          >
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M9 11V6a2 2 0 1 1 4 0v5" />
-              <path d="M13 11V4a2 2 0 1 1 4 0v9" />
-              <path d="M17 9a2 2 0 1 1 4 0v4a7 7 0 0 1-7 7h-2a7 7 0 0 1-6-3.5L3.5 14a2 2 0 0 1 3.4-2L9 14" />
-            </svg>
-          </button>
-          <Link
-            href={`/messages/${profile.id}`}
-            className="flex h-12 flex-1 items-center justify-center rounded-full bg-accent font-semibold text-black"
-          >
-            Message
-          </Link>
-        </div>
-      </div>
+      <ProfileActions profile={profile} />
     </>
   );
 }

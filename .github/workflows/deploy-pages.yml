@@ -1,6 +1,7 @@
 name: Deploy web to GitHub Pages
 
 # Publishes the static export in web/out to GitHub Pages.
+# Requires repo Settings -> Pages -> Source: "GitHub Actions".
 
 on:
   push:
